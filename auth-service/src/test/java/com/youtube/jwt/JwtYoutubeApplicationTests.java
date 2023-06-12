@@ -1,13 +1,13 @@
-package com.jwt.implementation;
+package com.youtube.jwt;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JwtWithRoleApplicationTests {
+class JwtYoutubeApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
