@@ -22,7 +22,7 @@ public class ApplicationExceptionHandler {
         return errorMap;
     }
 
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     @ExceptionHandler(MovieNotFoundException.class)
     public Map<String, String> handleBusinessException(MovieNotFoundException ex) {
         Map<String, String> errorMap = new HashMap<>();

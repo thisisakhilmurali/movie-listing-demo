@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ust.project.dto.MovieDto;
 import com.ust.project.entity.Movie;
-import com.ust.project.entity.MovieDto;
 import com.ust.project.exception.MovieNotFoundException;
 import com.ust.project.repository.MovieRepository;
 import com.ust.project.service.MovieService;

@@ -8,8 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.ust.project.dto.MovieDto;
 import com.ust.project.entity.Movie;
-import com.ust.project.entity.MovieDto;
 import com.ust.project.exception.MovieNotFoundException;
 import com.ust.project.repository.MovieRepository;
 
