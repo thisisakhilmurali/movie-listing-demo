@@ -26,7 +26,7 @@ public class MovieDto {
 	private String duration;
 	@NotNull
 	private String country;
-	@Size(min=1,max=10)
+	@Size(min=1,max=10,message="Overall rating must be between 1 and 10")
 	private double overallRate;
 
 }
