@@ -1,8 +1,11 @@
 package com.youtube.jwt.entity;
 
-public class JwtRequest {
+import javax.validation.constraints.NotEmpty;
 
+public class JwtRequest {
+    @NotEmpty(message = "Please enter your username")
     private String userName;
+    @NotEmpty(message = "Please enter your password")
     private String userPassword;
 
     public String getUserName() {

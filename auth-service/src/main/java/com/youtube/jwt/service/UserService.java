@@ -1,5 +1,6 @@
 package com.youtube.jwt.service;
 
+import com.youtube.jwt.dto.UserRegistrationRequest;
 import com.youtube.jwt.repository.RoleRepository;
 import com.youtube.jwt.repository.UserRepository;
 import com.youtube.jwt.entity.Role;
@@ -44,20 +45,24 @@ public class UserService {
         adminRoles.add(adminRole);
         adminUser.setRole(adminRoles);
         userRepository.save(adminUser);
-
     }
 
-    public User registerNewUser(User user) {
-        Role role = roleRepository.findById("User").get();
+    public User registerNewUser(UserRegistrationRequest userRegistrationRequest) {
+        User user = new User();
+        user.setUserName(userRegistrationRequest.getUserName());
+        user.setUserFirstName(userRegistrationRequest.getUserFirstName());
+        user.setUserLastName(userRegistrationRequest.getUserLastName());
+        user.setUserPassword(getEncodedPassword(userRegistrationRequest.getUserPassword()));
+
+        Role userRole = roleRepository.findById("User").orElseThrow(() -> new RuntimeException("User role not found"));
         Set<Role> userRoles = new HashSet<>();
-        userRoles.add(role);
+        userRoles.add(userRole);
         user.setRole(userRoles);
-        user.setUserPassword(getEncodedPassword(user.getUserPassword()));
 
         return userRepository.save(user);
     }
 
-    public String getEncodedPassword(String password) {
+    private String getEncodedPassword(String password) {
         return passwordEncoder.encode(password);
     }
 }
