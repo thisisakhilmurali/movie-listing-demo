@@ -27,12 +27,12 @@ public class UserService {
 
         Role adminRole = new Role();
         adminRole.setRoleName("Admin");
-        adminRole.setRoleDescription("Admin role");
+        adminRole.setRoleDescription("Admin Role: Top Priority");
         roleRepository.save(adminRole);
 
         Role userRole = new Role();
         userRole.setRoleName("User");
-        userRole.setRoleDescription("Default role for newly created record");
+        userRole.setRoleDescription("User Role: Restricted Priority");
         roleRepository.save(userRole);
 
         User adminUser = new User();
