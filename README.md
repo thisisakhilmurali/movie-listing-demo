@@ -1,16 +1,6 @@
 ## Movie Rating and Listing Application
 ---
 
-### <u>Contributors</u>
-
-<a href="https://github.com/thisisakhilmurali/movie-listing-demo/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=thisisakhilmurali/movie-listing-demo" />
-</a>
-
-<br>
-
----
-
 ### Microservices
 * Eureka Server
 * Cloud Config Server
@@ -32,3 +22,6 @@
     * Search Movie by Date: `http://domain:port/version/user/search/movie/date/{date}`
     * Add a Rating to Movie: `http://domain:port/version/user/{movie_name}/rate`
 * Auth
+    * Register new User: `http://domain:port/version/registerNewUser`
+    * Authenticate (Admin/User): `http://domain:port/version/authenticate`
+    * With JWT: `http://domain:port/version/forUser` / `http://domain:port/version/forAdmin`
