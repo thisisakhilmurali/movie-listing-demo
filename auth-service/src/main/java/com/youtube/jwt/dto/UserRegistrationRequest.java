@@ -1,11 +1,16 @@
 package com.youtube.jwt.dto;
 
 import com.youtube.jwt.validation.ValidPassword;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserRegistrationRequest {
 
 
@@ -23,45 +28,45 @@ public class UserRegistrationRequest {
     @NotEmpty(message = "Password is required")
     @ValidPassword(message = "Password criteria does not match")
     private String userPassword;
-    public UserRegistrationRequest() {
-    }
-
-    public UserRegistrationRequest(String userName, String userFirstName, String userLastName, String userPassword) {
-        this.userName = userName;
-        this.userFirstName = userFirstName;
-        this.userLastName = userLastName;
-        this.userPassword = userPassword;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getUserFirstName() {
-        return userFirstName;
-    }
-
-    public void setUserFirstName(String userFirstName) {
-        this.userFirstName = userFirstName;
-    }
-
-    public String getUserLastName() {
-        return userLastName;
-    }
-
-    public void setUserLastName(String userLastName) {
-        this.userLastName = userLastName;
-    }
-
-    public String getUserPassword() {
-        return userPassword;
-    }
-
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
-    }
+//    public UserRegistrationRequest() {
+//    }
+//
+//    public UserRegistrationRequest(String userName, String userFirstName, String userLastName, String userPassword) {
+//        this.userName = userName;
+//        this.userFirstName = userFirstName;
+//        this.userLastName = userLastName;
+//        this.userPassword = userPassword;
+//    }
+//
+//    public String getUserName() {
+//        return userName;
+//    }
+//
+//    public void setUserName(String userName) {
+//        this.userName = userName;
+//    }
+//
+//    public String getUserFirstName() {
+//        return userFirstName;
+//    }
+//
+//    public void setUserFirstName(String userFirstName) {
+//        this.userFirstName = userFirstName;
+//    }
+//
+//    public String getUserLastName() {
+//        return userLastName;
+//    }
+//
+//    public void setUserLastName(String userLastName) {
+//        this.userLastName = userLastName;
+//    }
+//
+//    public String getUserPassword() {
+//        return userPassword;
+//    }
+//
+//    public void setUserPassword(String userPassword) {
+//        this.userPassword = userPassword;
+//    }
 }
