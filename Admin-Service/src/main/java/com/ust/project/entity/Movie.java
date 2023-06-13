@@ -18,7 +18,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor(staticName="build")
 @Entity
-@Table(name="movie")
+@Table(name="MOVIES_TABLE")
 public class Movie {
 	
 	
