@@ -36,17 +36,9 @@ public class MovieDto {
 	@NotNull
 	@Pattern(regexp = "^[a-zA-Z]+$",message="Country name  should only contain alphabetic characters")
 	private String country;
-<<<<<<< HEAD
 	@NotNull
-	//@Pattern(regexp = "^\\d{1,10}$", message = "Rating must be between 1 and 10")
-	
-	//@Pattern(regexp = "^(?:10(?:\\.0+)?|[1-9](?:\\.\\d+)?)$")
-	@Pattern(regexp = "^(?:10(?:\\.0+)?|[1-9](?:\\.\\d+)?)$")
-	//@Min(1)
-	//@Max(10)
-=======
-	@Size(min=1,max=10,message="Overall rating must be between 1 and 10")
->>>>>>> e102bec084c265bc3c3d63469dad2280c8723c70
+	@Min(value = 1, message = "Rating must be at least 1")
+    @Max(value = 10, message = "Rating must not exceed 10")
 	private double overallRate;
 
 }
