@@ -1,84 +1,169 @@
 package com.ust.project.controller;
 
 import java.util.List;
+import java.util.Optional;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.ust.project.model.Movie;
+import com.ust.project.dto.MovieDto;
+import com.ust.project.entity.Movie;
+import com.ust.project.exception.MovieNotFoundException;
+import com.ust.project.repository.MovieRepository;
 import com.ust.project.service.MovieService;
 
 
 
 @RestController
-@RequestMapping("/movies")
+@RequestMapping("/1.0/admin")
 public class MovieController {
+	
+	@Autowired
+	MovieService movieService;
+	
+	
 
-    private final MovieService movieService;
+//	@PostMapping("/addAMovie")
+//	public ResponseEntity<Movie> addAMovie(@RequestBody @Valid MovieDto dto) {
+//		return ResponseEntity.ok(movierepo.save(dto));
+//		return ResponseEntity.ok(movieService.add(dto));
+//	}
+	
 
-    @Autowired
-    public MovieController(MovieService movieService) {
-        this.movieService = movieService;
-    }
 
-    @PostMapping
-    public ResponseEntity<String> addMovie(@RequestParam("name") String name,
-                                           @RequestParam("duration") String duration,
-                                           @RequestParam("imageFile") MultipartFile imageFile) {
-        try {
-            movieService.addMovie(name, duration, imageFile);
-            return ResponseEntity.ok("Movie added successfully");
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to add movie");
-        }
-    }
-    
-    @GetMapping
-    public ResponseEntity<List<Movie>> getAllMovies() {
-        List<Movie> movies = movieService.getAllMovies();
-        return ResponseEntity.ok(movies);
-    }
-    
-    @GetMapping("/{id}")
-    public ResponseEntity<Movie> getMovieById(@PathVariable("id") Long id) {
-        Movie movie = movieService.getMovieById(id);
-        if (movie != null) {
-            return ResponseEntity.ok(movie);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
-    
-    @PutMapping("/{id}")
-    public ResponseEntity<String> updateMovie(@PathVariable("id") Long id,
-                                              @RequestParam("name") String name,
-                                              @RequestParam("duration") String duration,
-                                              @RequestParam("imageFile") MultipartFile imageFile) {
-        try {
-            movieService.updateMovie(id, name, duration, imageFile);
+	
+	@PostMapping(value = "/addMovie")
+	
+	public ResponseEntity<String> addMovie( @RequestParam("movieName") 
+	                                      	String name,
+	                                       @RequestParam("movieDirector") 
+	                                        String director,
+	                                       @RequestParam("movieGenre") 
+	                                       String genre,
+	                                       @RequestParam("movieReleaseDate") 
+	                                       String releaseDate,
+	                                       @RequestParam("movieLanguage") 
+	                                        String language,
+	                                       @RequestParam("duration") 
+	                                        String duration,
+	                                       @RequestParam("country") 
+	                                       String country,
+	                                       @RequestParam("description") 
+	                                       String description,	                                       
+	                                       @RequestParam("overallRate") 
+										    double overallrate,
+											@RequestParam("file")
+	                                        MultipartFile imageFile) {
+	    try {
+	        movieService.addMovie(name, director, genre, releaseDate, language, duration, country,description,overallrate, imageFile);
+	        return ResponseEntity.ok("Movie added successfully");
+	    } catch (Exception e) {
+	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to add movie");
+	    }
+	}
+	
+//	@PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+//	
+//	public ResponseEntity<String> addMovie( @RequestBody @Valid MovieDto dto,
+//											@RequestParam("file")
+//	                                        MultipartFile imageFile) {
+//	    try {
+//	        movieService.addMovie(dto, imageFile);
+//	        return ResponseEntity.ok("Movie added successfully");
+//	    } catch (Exception e) {
+//	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to add movie");
+//	    }
+//	}
+	
+	
+	@GetMapping("/viewAllMovies")
+	public List<Movie> viewAllMovies() {
+		return movieService.view();
+	}
+
+	@GetMapping("/get/{movieId}")
+	public ResponseEntity<Movie> getById(@PathVariable long movieId) throws MovieNotFoundException{
+		return ResponseEntity.ok(movieService.fetchById(movieId));
+	}
+
+	@PutMapping("/updateAMovie/{movieId}")
+	public ResponseEntity<String> updateMovie(@PathVariable long movieId,
+			@RequestParam("movieName") 
+    String name,
+   @RequestParam("movieDirector") 
+    String director,
+   @RequestParam("movieGenre") 
+   String genre,
+   @RequestParam("movieReleaseDate") 
+   String releaseDate,
+   @RequestParam("movieLanguage") 
+    String language,
+   @RequestParam("duration") 
+    String duration,
+   @RequestParam("country") 
+   String country,
+   @RequestParam("description") 
+   String description,	                                       
+   @RequestParam("overallRate") 
+    double overallrate,
+	@RequestParam("file")
+    MultipartFile imageFile)  throws MovieNotFoundException {
+		
+		try {
+	        movieService.updateMovie(movieId,name, director, genre, releaseDate, language, duration, country,description,overallrate, imageFile);
+
             return ResponseEntity.ok("Movie updated successfully");
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to update movie");
         }
     }
-    
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteMovie(@PathVariable Long id) {
-        try {
-            movieService.deleteMovieById(id);
-            return ResponseEntity.ok("Movie deleted successfully");
-        } catch (IllegalArgumentException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to delete movie");
-        }
-    }
+	
+	 @DeleteMapping("/deleteAMovie/{movieId}")
+	    public ResponseEntity<String> deleteMovie(@PathVariable Long movieId) {
+	        try {
+	            movieService.deleteMovieById(movieId);
+	            return ResponseEntity.ok("Movie deleted successfully");
+	        } catch (IllegalArgumentException e) {
+	            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+	        } catch (Exception e) {
+	            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to delete movie");
+	        }
+	    }
+		
+        
+	
+		
 
+//	@DeleteMapping("/deleteAMovie/{movieId}")
+//	public String deleteMovie(@PathVariable long movieId) throws MovieNotFoundException {
+//		
+//	return	movieService.delete(movieId);
+//		
+//	}
+	}
 
-
-    
-}
 

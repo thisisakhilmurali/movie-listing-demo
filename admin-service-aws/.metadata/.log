@@ -1,4 +1,4 @@
-!SESSION 2023-06-13 14:44:00.824 -----------------------------------------------
+!SESSION 2023-06-12 10:57:23.238 -----------------------------------------------
 eclipse.buildId=4.12.1.202109301525
 java.version=16.0.2
 java.vendor=Oracle Corporation
@@ -6,15 +6,15 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
 Framework arguments:  -product org.springframework.boot.ide.branding.sts4
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
 
-!ENTRY org.eclipse.jface 2 0 2023-06-13 14:44:15.294
+!ENTRY org.eclipse.jface 2 0 2023-06-12 10:57:42.297
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-13 14:44:15.294
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-12 10:57:42.297
 !MESSAGE A conflict occurred for CTRL+SHIFT+T:
 Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
 		Open a type in a Java editor,
 		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4f22fd5d,
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c8a9266,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
@@ -22,285 +22,17 @@ Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
 		,
 		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@26d445e9,
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@63ad5fe7,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
 
-!ENTRY org.eclipse.egit.ui 2 0 2023-06-13 14:44:22.089
+!ENTRY org.eclipse.egit.ui 2 0 2023-06-12 10:57:47.774
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
-!ENTRY org.eclipse.ui 2 2 2023-06-13 14:44:31.409
-!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
-!SESSION 2023-06-13 14:46:39.250 -----------------------------------------------
-eclipse.buildId=4.12.1.202109301525
-java.version=16.0.2
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
-Framework arguments:  -product org.springframework.boot.ide.branding.sts4
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
-
-!ENTRY org.eclipse.jface 2 0 2023-06-13 14:46:58.079
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-13 14:46:58.079
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@52325940,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7f792530,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.eclipse.egit.ui 2 0 2023-06-13 14:47:03.701
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.jdt.apt.core 4 1 2023-06-13 14:47:41.946
-!MESSAGE Failed to remove classpath entry for old generated src folder .apt_generated
-!STACK 1
-Java Model Exception: Core Exception [code 272] Could not write file: C:\Users\Administrator\Documents\Admin-Service\.classpath.
-	at org.eclipse.jdt.internal.core.JavaProject.writeFileEntries(JavaProject.java:3459)
-	at org.eclipse.jdt.internal.core.JavaModelManager$PerProjectInfo.writeAndCacheClasspath(JavaModelManager.java:1505)
-	at org.eclipse.jdt.internal.core.JavaModelManager$PerProjectInfo.writeAndCacheClasspath(JavaModelManager.java:1517)
-	at org.eclipse.jdt.internal.core.SetClasspathOperation.executeOperation(SetClasspathOperation.java:81)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:811)
-	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3656)
-	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3616)
-	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3672)
-	at org.eclipse.jdt.apt.core.internal.generatedfile.ClasspathUtil.removeFromProjectClasspath(ClasspathUtil.java:141)
-	at org.eclipse.jdt.apt.core.internal.generatedfile.GeneratedSourceFolderManager.removeFolder(GeneratedSourceFolderManager.java:463)
-	at org.eclipse.jdt.apt.core.internal.generatedfile.GeneratedSourceFolderManager.folderNamePreferenceChanged(GeneratedSourceFolderManager.java:321)
-	at org.eclipse.jdt.apt.core.internal.AptProject.preferenceChanged(AptProject.java:81)
-	at org.eclipse.jdt.apt.core.util.AptConfig.setString(AptConfig.java:969)
-	at org.eclipse.jdt.apt.core.util.AptConfig.setGenSrcDir(AptConfig.java:917)
-	at org.jboss.tools.maven.apt.internal.AbstractAptConfiguratorDelegate.configureProject(AbstractAptConfiguratorDelegate.java:171)
-	at org.jboss.tools.maven.apt.internal.AbstractAptProjectConfigurator.configure(AbstractAptProjectConfigurator.java:99)
-	at org.eclipse.m2e.core.project.configurator.AbstractLifecycleMapping.configure(AbstractLifecycleMapping.java:122)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$2(ProjectConfigurationManager.java:511)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:505)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.configureNewMavenProjects(ProjectConfigurationManager.java:296)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$0(ProjectConfigurationManager.java:176)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
-	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.importProjects(ProjectConfigurationManager.java:146)
-	at org.eclipse.m2e.core.ui.internal.wizards.ImportMavenProjectsJob$1.doCreateMavenProjects(ImportMavenProjectsJob.java:70)
-	at org.eclipse.m2e.core.ui.internal.wizards.AbstractCreateMavenProjectsOperation.run(AbstractCreateMavenProjectsOperation.java:75)
-	at org.eclipse.m2e.core.ui.internal.wizards.ImportMavenProjectsJob.runInWorkspace(ImportMavenProjectsJob.java:79)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: java.io.FileNotFoundException: C:\Users\Administrator\Documents\Admin-Service\.classpath (The process cannot access the file because it is being used by another process)
-	at java.base/java.io.FileOutputStream.open0(Native Method)
-	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:438)
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.write(FileSystemResourceManager.java:1175)
-	at org.eclipse.core.internal.resources.File.internalSetContents(File.java:301)
-	at org.eclipse.core.internal.resources.File.setContents(File.java:336)
-	at org.eclipse.jdt.internal.core.JavaProject.setSharedProperty(JavaProject.java:3711)
-	at org.eclipse.jdt.internal.core.JavaProject.writeFileEntries(JavaProject.java:3456)
-	... 35 more
-Caused by: org.eclipse.core.runtime.CoreException: Could not write file: C:\Users\Administrator\Documents\Admin-Service\.classpath.
-	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:48)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:448)
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.write(FileSystemResourceManager.java:1175)
-	at org.eclipse.core.internal.resources.File.internalSetContents(File.java:301)
-	at org.eclipse.core.internal.resources.File.setContents(File.java:336)
-	at org.eclipse.jdt.internal.core.JavaProject.setSharedProperty(JavaProject.java:3711)
-	at org.eclipse.jdt.internal.core.JavaProject.writeFileEntries(JavaProject.java:3456)
-	at org.eclipse.jdt.internal.core.JavaModelManager$PerProjectInfo.writeAndCacheClasspath(JavaModelManager.java:1505)
-	at org.eclipse.jdt.internal.core.JavaModelManager$PerProjectInfo.writeAndCacheClasspath(JavaModelManager.java:1517)
-	at org.eclipse.jdt.internal.core.SetClasspathOperation.executeOperation(SetClasspathOperation.java:81)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:811)
-	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3656)
-	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3616)
-	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3672)
-	at org.eclipse.jdt.apt.core.internal.generatedfile.ClasspathUtil.removeFromProjectClasspath(ClasspathUtil.java:141)
-	at org.eclipse.jdt.apt.core.internal.generatedfile.GeneratedSourceFolderManager.removeFolder(GeneratedSourceFolderManager.java:463)
-	at org.eclipse.jdt.apt.core.internal.generatedfile.GeneratedSourceFolderManager.folderNamePreferenceChanged(GeneratedSourceFolderManager.java:321)
-	at org.eclipse.jdt.apt.core.internal.AptProject.preferenceChanged(AptProject.java:81)
-	at org.eclipse.jdt.apt.core.util.AptConfig.setString(AptConfig.java:969)
-	at org.eclipse.jdt.apt.core.util.AptConfig.setGenSrcDir(AptConfig.java:917)
-	at org.jboss.tools.maven.apt.internal.AbstractAptConfiguratorDelegate.configureProject(AbstractAptConfiguratorDelegate.java:171)
-	at org.jboss.tools.maven.apt.internal.AbstractAptProjectConfigurator.configure(AbstractAptProjectConfigurator.java:99)
-	at org.eclipse.m2e.core.project.configurator.AbstractLifecycleMapping.configure(AbstractLifecycleMapping.java:122)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$2(ProjectConfigurationManager.java:511)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:505)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.configureNewMavenProjects(ProjectConfigurationManager.java:296)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$0(ProjectConfigurationManager.java:176)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
-	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.importProjects(ProjectConfigurationManager.java:146)
-	at org.eclipse.m2e.core.ui.internal.wizards.ImportMavenProjectsJob$1.doCreateMavenProjects(ImportMavenProjectsJob.java:70)
-	at org.eclipse.m2e.core.ui.internal.wizards.AbstractCreateMavenProjectsOperation.run(AbstractCreateMavenProjectsOperation.java:75)
-	at org.eclipse.m2e.core.ui.internal.wizards.ImportMavenProjectsJob.runInWorkspace(ImportMavenProjectsJob.java:79)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: java.io.FileNotFoundException: C:\Users\Administrator\Documents\Admin-Service\.classpath (The process cannot access the file because it is being used by another process)
-	at java.base/java.io.FileOutputStream.open0(Native Method)
-	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:438)
-	... 40 more
-!SUBENTRY 1 org.eclipse.core.filesystem 4 272 2023-06-13 14:47:41.947
-!MESSAGE Could not write file: C:\Users\Administrator\Documents\Admin-Service\.classpath.
-!STACK 0
-java.io.FileNotFoundException: C:\Users\Administrator\Documents\Admin-Service\.classpath (The process cannot access the file because it is being used by another process)
-	at java.base/java.io.FileOutputStream.open0(Native Method)
-	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
-	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.openOutputStream(LocalFile.java:438)
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.write(FileSystemResourceManager.java:1175)
-	at org.eclipse.core.internal.resources.File.internalSetContents(File.java:301)
-	at org.eclipse.core.internal.resources.File.setContents(File.java:336)
-	at org.eclipse.jdt.internal.core.JavaProject.setSharedProperty(JavaProject.java:3711)
-	at org.eclipse.jdt.internal.core.JavaProject.writeFileEntries(JavaProject.java:3456)
-	at org.eclipse.jdt.internal.core.JavaModelManager$PerProjectInfo.writeAndCacheClasspath(JavaModelManager.java:1505)
-	at org.eclipse.jdt.internal.core.JavaModelManager$PerProjectInfo.writeAndCacheClasspath(JavaModelManager.java:1517)
-	at org.eclipse.jdt.internal.core.SetClasspathOperation.executeOperation(SetClasspathOperation.java:81)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:811)
-	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3656)
-	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3616)
-	at org.eclipse.jdt.internal.core.JavaProject.setRawClasspath(JavaProject.java:3672)
-	at org.eclipse.jdt.apt.core.internal.generatedfile.ClasspathUtil.removeFromProjectClasspath(ClasspathUtil.java:141)
-	at org.eclipse.jdt.apt.core.internal.generatedfile.GeneratedSourceFolderManager.removeFolder(GeneratedSourceFolderManager.java:463)
-	at org.eclipse.jdt.apt.core.internal.generatedfile.GeneratedSourceFolderManager.folderNamePreferenceChanged(GeneratedSourceFolderManager.java:321)
-	at org.eclipse.jdt.apt.core.internal.AptProject.preferenceChanged(AptProject.java:81)
-	at org.eclipse.jdt.apt.core.util.AptConfig.setString(AptConfig.java:969)
-	at org.eclipse.jdt.apt.core.util.AptConfig.setGenSrcDir(AptConfig.java:917)
-	at org.jboss.tools.maven.apt.internal.AbstractAptConfiguratorDelegate.configureProject(AbstractAptConfiguratorDelegate.java:171)
-	at org.jboss.tools.maven.apt.internal.AbstractAptProjectConfigurator.configure(AbstractAptProjectConfigurator.java:99)
-	at org.eclipse.m2e.core.project.configurator.AbstractLifecycleMapping.configure(AbstractLifecycleMapping.java:122)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$2(ProjectConfigurationManager.java:511)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:505)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.configureNewMavenProjects(ProjectConfigurationManager.java:296)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$0(ProjectConfigurationManager.java:176)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
-	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
-	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
-	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.importProjects(ProjectConfigurationManager.java:146)
-	at org.eclipse.m2e.core.ui.internal.wizards.ImportMavenProjectsJob$1.doCreateMavenProjects(ImportMavenProjectsJob.java:70)
-	at org.eclipse.m2e.core.ui.internal.wizards.AbstractCreateMavenProjectsOperation.run(AbstractCreateMavenProjectsOperation.java:75)
-	at org.eclipse.m2e.core.ui.internal.wizards.ImportMavenProjectsJob.runInWorkspace(ImportMavenProjectsJob.java:79)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:47:57.294
-!MESSAGE Entering DelegatingStreamConnectionProvider()
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:47:57.295
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@649ae947[org.springframework.tooling.boot.ls:1.29.0.202109301312(id=557)]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:47:57.314
-!MESSAGE SpringBootLanguageServer exists!
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:47:57.717
-!MESSAGE Instantiating ReusableClasspathListenerHandler
-
-!ENTRY org.eclipse.lsp4e 2 0 2023-06-13 14:48:03.758
-!MESSAGE Timeout waiting for data to generate LS hover
-!STACK 0
-java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1956)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2091)
-	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
-	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
-	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
-	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
-	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
-
-!ENTRY org.eclipse.lsp4e 2 0 2023-06-13 14:48:06.751
-!MESSAGE Timeout waiting for data to generate LS hover
-!STACK 0
-java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1956)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2091)
-	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
-	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
-	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
-	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
-	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:48:07.766
-!MESSAGE Boot LS startup time from start to initialized: 10438ms
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:48:07.931
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.pYIxrBHQisBatched = true
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:48:07.938
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:48:07.942
-!MESSAGE Scheduling initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:48:07.943
-!MESSAGE Scheduling initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:48:07.944
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:48:07.944
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.pYIxrBHQ => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:48:07.952
-!MESSAGE classpath=95 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:48:07.957
-!MESSAGE buffering callback sts4.classpath.pYIxrBHQ Admin false 95
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:48:07.958
-!MESSAGE executing callback sts4.classpath.pYIxrBHQ 1 batched events
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:48:08.695
-!MESSAGE executing callback sts4.classpath.pYIxrBHQ SUCCESS [done]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:50:40.466
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.pYIxrBHQ
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:50:40.467
-!MESSAGE unsubscribing from classpath changes: sts4.classpath.pYIxrBHQ
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:50:40.467
-!MESSAGE subsribers = {}
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-13 14:50:40.468
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.pYIxrBHQ => OK
-
-!ENTRY org.eclipse.ui 2 2 2023-06-13 14:50:41.299
+!ENTRY org.eclipse.ui 2 2 2023-06-12 10:59:12.080
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
